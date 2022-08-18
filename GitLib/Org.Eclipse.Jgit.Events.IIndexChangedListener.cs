@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+using Android.Runtime;
+using Java.Interop;
+
+namespace Org.Eclipse.Jgit.Events {
+
+	/// <summary>Receives <c>IndexChangedEvent</c>s.</summary>
+	// Metadata.xml XPath interface reference: path="/api/package[@name='org.eclipse.jgit.events']/interface[@name='IndexChangedListener']"
+	[Register ("org/eclipse/jgit/events/IndexChangedListener", "", "Org.Eclipse.Jgit.Events.IIndexChangedListenerInvoker")]
+	public partial interface IIndexChangedListener : global::Org.Eclipse.Jgit.Events.IRepositoryListener {
+		// Metadata.xml XPath method reference: path="/api/package[@name='org.eclipse.jgit.events']/interface[@name='IndexChangedListener']/method[@name='onIndexChanged' and count(parameter)=1 and parameter[1][@type='org.eclipse.jgit.events.IndexChangedEvent']]"
+		/// <param name="event">information about the changes.</param>
+		/// <summary>Invoked when any change is made to the index.</summary>
+		[Register ("onIndexChanged", "(Lorg/eclipse/jgit/events/IndexChangedEvent;)V", "GetOnIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_Handler:Org.Eclipse.Jgit.Events.IIndexChangedListenerInvoker, AndroidBindableLibrary")]
+		void OnIndexChanged (global::Org.Eclipse.Jgit.Events.IndexChangedEvent e);
+
+	}
+
+	[global::Android.Runtime.Register ("org/eclipse/jgit/events/IndexChangedListener", DoNotGenerateAcw=true)]
+	internal partial class IIndexChangedListenerInvoker : global::Java.Lang.Object, IIndexChangedListener {
+		static readonly JniPeerMembers _members = new XAPeerMembers ("org/eclipse/jgit/events/IndexChangedListener", typeof (IIndexChangedListenerInvoker));
+
+		static IntPtr java_class_ref {
+			get { return _members.JniPeerType.PeerReference.Handle; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+			get { return _members; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override IntPtr ThresholdClass {
+			get { return class_ref; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override global::System.Type ThresholdType {
+			get { return _members.ManagedPeerType; }
+		}
+
+		IntPtr class_ref;
+
+		public static IIndexChangedListener GetObject (IntPtr handle, JniHandleOwnership transfer)
+		{
+			return global::Java.Lang.Object.GetObject<IIndexChangedListener> (handle, transfer);
+		}
+
+		static IntPtr Validate (IntPtr handle)
+		{
+			if (!JNIEnv.IsInstanceOf (handle, java_class_ref))
+				throw new InvalidCastException ($"Unable to convert instance of type '{JNIEnv.GetClassNameFromInstance (handle)}' to type 'org.eclipse.jgit.events.IndexChangedListener'.");
+			return handle;
+		}
+
+		protected override void Dispose (bool disposing)
+		{
+			if (this.class_ref != IntPtr.Zero)
+				JNIEnv.DeleteGlobalRef (this.class_ref);
+			this.class_ref = IntPtr.Zero;
+			base.Dispose (disposing);
+		}
+
+		public IIndexChangedListenerInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
+		{
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
+			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
+			JNIEnv.DeleteLocalRef (local_ref);
+		}
+
+		static Delegate cb_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_;
+#pragma warning disable 0169
+		static Delegate GetOnIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_Handler ()
+		{
+			if (cb_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_ == null)
+				cb_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_ = JNINativeWrapper.CreateDelegate ((_JniMarshal_PPL_V) n_OnIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_);
+			return cb_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_;
+		}
+
+		static void n_OnIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_ (IntPtr jnienv, IntPtr native__this, IntPtr native_e)
+		{
+			var __this = global::Java.Lang.Object.GetObject<global::Org.Eclipse.Jgit.Events.IIndexChangedListener> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var e = global::Java.Lang.Object.GetObject<global::Org.Eclipse.Jgit.Events.IndexChangedEvent> (native_e, JniHandleOwnership.DoNotTransfer);
+			__this.OnIndexChanged (e);
+		}
+#pragma warning restore 0169
+
+		IntPtr id_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_;
+		public unsafe void OnIndexChanged (global::Org.Eclipse.Jgit.Events.IndexChangedEvent e)
+		{
+			if (id_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_ == IntPtr.Zero)
+				id_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_ = JNIEnv.GetMethodID (class_ref, "onIndexChanged", "(Lorg/eclipse/jgit/events/IndexChangedEvent;)V");
+			JValue* __args = stackalloc JValue [1];
+			__args [0] = new JValue ((e == null) ? IntPtr.Zero : ((global::Java.Lang.Object) e).Handle);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_onIndexChanged_Lorg_eclipse_jgit_events_IndexChangedEvent_, __args);
+		}
+
+	}
+}

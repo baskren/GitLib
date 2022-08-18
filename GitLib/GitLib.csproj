@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47D65584-BD96-4025-93E6-F329FE294048}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GitLib</RootNamespace>
+    <AssemblyName>GitLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>True</Deterministic>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.AddCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.AddNoteCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ApplyCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ApplyResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ArchiveCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.BlameCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CheckoutCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CheckoutResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CherryPickCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CherryPickResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CleanCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CloneCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CommitCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.CreateBranchCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.DeleteBranchCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.DeleteTagCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.DescribeCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.DiffCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.CanceledException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.CannotDeleteCurrentBranchException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.CheckoutConflictException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.ConcurrentRefUpdateException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.DetachedHeadException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.GitAPIException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidConfigurationException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidMergeHeadsException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidRebaseStepException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidRefNameException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidRemoteException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.InvalidTagNameException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.JGitInternalException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.MultipleParentsNotAllowedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.NoFilepatternException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.NoHeadException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.NoMessageException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.NotMergedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.PatchApplyException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.PatchFormatException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.RefAlreadyExistsException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.RefNotFoundException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.RejectCommitException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.StashApplyFailureException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.TransportException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.UnmergedPathsException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Errors.WrongRepositoryStateException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.FetchCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.GarbageCollectCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Git.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.GitCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.InitCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ITransportConfigCallback.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ListBranchCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ListNotesCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ListTagCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.LogCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.LsRemoteCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.MergeCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.MergeResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.NameRevCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.PullCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.PullResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.PushCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RebaseCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RebaseResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ReflogCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RemoveNoteCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RenameBranchCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ResetCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RevertCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.RmCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.ShowNoteCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.StashApplyCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.StashCreateCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.StashDropCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.StashListCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.Status.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.StatusCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.SubmoduleAddCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.SubmoduleInitCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.SubmoduleStatusCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.SubmoduleSyncCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.SubmoduleUpdateCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.TagCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Api.TransportCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Attributes.Attribute.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Attributes.AttributesNode.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Attributes.AttributesRule.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Blame.BlameGenerator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Blame.BlameResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.ContentSource.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.DiffAlgorithm.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.DiffConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.DiffEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.DiffFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.Edit.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.EditList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.HashedSequence.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.HashedSequenceComparator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.HashedSequencePair.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.HistogramDiff.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.LowLevelDiffAlgorithm.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.MyersDiff.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.PatchIdDiffFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.RawText.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.RawTextComparator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.RenameDetector.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.Sequence.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.SequenceComparator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.Subsequence.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Diff.SubsequenceComparator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCache.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheBuildIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheCheckout.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheEditor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.DirCacheTree.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Dircache.InvalidPathException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.AmbiguousObjectException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.CheckoutConflictException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.CompoundException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.ConfigInvalidException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.CorruptObjectException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.EntryExistsException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.IllegalTodoFileModification.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.IncorrectObjectTypeException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.IndexWriteException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.InvalidObjectIdException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.InvalidPatternException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.LargeObjectException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.LockFailedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.MissingBundlePrerequisiteException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.MissingObjectException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.NoClosingBracketException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.NoMergeBaseException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.NoRemoteRepositoryException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.NotSupportedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.NoWorkTreeException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.ObjectWritingException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.PackInvalidException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.PackMismatchException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.PackProtocolException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.RemoteRepositoryException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.RepositoryNotFoundException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.RevisionSyntaxException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.RevWalkException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.StopWalkException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.StoredObjectRepresentationNotAvailableException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.SymlinksNotSupportedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TooLargeObjectInPackException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TooLargePackException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TranslationBundleException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TranslationBundleLoadingException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TranslationStringMissingException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.TransportException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.UnmergedPathException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.UnpackException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Errors.UnsupportedCredentialItem.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.ConfigChangedEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.IConfigChangedListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.IIndexChangedListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.IndexChangedEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.IRefsChangedListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.IRepositoryListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.ListenerHandle.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.ListenerList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.RefsChangedEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Events.RepositoryEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Fnmatch.FileNameMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Gitrepo.Internal.RepoText.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Gitrepo.RepoCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.FastIgnoreRule.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.IgnoreNode.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.IgnoreRule.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.AbstractMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.IMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.LeadingAsteriskMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.NameMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.PathMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.Strings.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.TrailingAsteriskMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.WildCardMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Ignore.Internal.WildMatcher.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.JGitText.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.BeforeDfsPackIndexLoadedEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsBlockCache.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsBlockCacheConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsCachedPack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsGarbageCollector.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsInserter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsObjDatabase.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsPackCompactor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsPackDescription.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsPackFile.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsPackParser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsPacksChangedEvent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsReader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsReaderOptions.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsRefDatabase.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsRepository.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsRepositoryBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsRepositoryDescription.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.DfsText.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.IBeforeDfsPackIndexLoadedListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.IDfsPacksChangedListener.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.InMemoryRepository.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Dfs.IReadableChannel.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.BitmapIndexImpl.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.CheckoutEntryImpl.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.FileRepository.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.FileSnapshot.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.GC.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.LockFile.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.ObjectDirectory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.ObjectDirectoryPackParser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackBitmapIndex.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackBitmapIndexBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackBitmapIndexRemapper.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackBitmapIndexWriterV1.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackFile.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackIndex.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackIndexWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackLock.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.PackReverseIndex.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.RefDirectory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.ReflogEntryImpl.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.ReflogWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.UnpackedObject.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.File.WindowCache.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.BinaryDelta.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.CachedPack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.DeltaEncoder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.DeltaIndex.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.IObjectReuseAsIs.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.ObjectToPack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.PackExt.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.PackOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.PackWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Internal.Storage.Pack.StoredObjectRepresentation.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.AbbreviatedObjectId.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.AnyObjectId.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BaseRepositoryBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BatchingProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BatchRefUpdate.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BitmapObject.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BlobBasedConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BranchConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.BranchTrackingStatus.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.CommitBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.Config.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ConfigConstants.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.Constants.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.CoreConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.EmptyProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.FileMode.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.FileTreeEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.GitlinkTreeEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IAsyncObjectLoaderQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IAsyncObjectSizeQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IAsyncOperation.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IBitmapIndex.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ICheckoutEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IndexDiff.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.InflaterCache.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IRef.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IReflogEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.IReflogReader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.MutableObjectId.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.NullProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectChecker.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectDatabase.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectId.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectIdOwnerMap.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectIdRef.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectIdSubclassMap.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectInserter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectLoader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectReader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ObjectStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.PersonIdent.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RebaseTodoFile.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RebaseTodoLine.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RefComparator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RefDatabase.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RefRename.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RefUpdate.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RefWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.Repository.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RepositoryBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RepositoryCache.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.RepositoryState.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.StoredConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.SymbolicRef.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.SymlinkTreeEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.TagBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.TextProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.ThreadSafeProgressMonitor.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.Tree.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.TreeEntry.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.TreeFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Lib.UserConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeAlgorithm.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeChunk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeMessageFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.Merger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.MergeStrategy.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.RecursiveMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.ResolveMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.SquashMessageFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.StrategyOneSided.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.StrategyRecursive.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.StrategyResolve.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.StrategySimpleTwoWayInCore.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.ThreeWayMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Merge.ThreeWayMergeStrategy.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Nls.NLS.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Nls.TranslationBundle.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.DefaultNoteMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.INoteMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.Note.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.NoteMap.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.NoteMapMerger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Notes.NotesMergeConflictException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.BinaryHunk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.CombinedFileHeader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.CombinedHunkHeader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.FileHeader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.FormatError.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.HunkHeader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Patch.Patch.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revplot.AbstractPlotRenderer.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revplot.PlotCommit.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revplot.PlotCommitList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revplot.PlotLane.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revplot.PlotWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.DateRevQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.FIFORevQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.AndRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.AuthorRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.CommitterRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.CommitTimeRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.MaxCountRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.MessageRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.NotRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.OrRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.PatternMatchRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.RevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.RevFlagFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.SkipRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.Filter.SubStringRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.FollowFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.FooterKey.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.FooterLine.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.IAsyncRevObjectQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.IDepthWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.LIFORevQueue.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.ObjectWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RenameCallback.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevBlob.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevCommit.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevCommitList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevFlag.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevFlagSet.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevObject.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevObjectList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevSort.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevTag.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevTree.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.RevWalkUtils.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Revwalk.TreeRevFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Storage.File.FileBasedConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Storage.File.FileRepositoryBuilder.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Storage.File.WindowCacheConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Storage.Pack.PackConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Submodule.SubmoduleStatus.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Submodule.SubmoduleStatusType.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Submodule.SubmoduleWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.AbstractAdvertiseRefsHook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.AdvertiseRefsHookChain.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.AmazonS3.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.BaseConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.BasePackFetchConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.BasePackPushConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.BaseReceivePack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.BundleWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.ChainingCredentialsProvider.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.CredentialItem.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.CredentialsProvider.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Daemon.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.DaemonClient.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.DaemonService.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.FetchResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.GitProtocolConstants.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Http.IHttpConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Http.IHttpConnectionFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Http.JDKHttpConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Http.JDKHttpConnectionFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.HttpTransport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IAdvertiseRefsHook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IFetchConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IPackTransport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IPostReceiveHook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IPreReceiveHook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IPreUploadHook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IPushConnection.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IRefFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IRemoteSession.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.ITransportBundle.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IUploadPackLogger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.IWalkTransport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.JschConfigSessionFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.JschSession.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.NetRC.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.NetRCCredentialsProvider.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.OpenSshConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.OperationResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PackedObjectInfo.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PacketLineIn.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PacketLineOut.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PackParser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PostReceiveHookChain.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PreReceiveHookChain.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PreUploadHookChain.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.PushResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.ReceiveCommand.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.ReceivePack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.RefAdvertiser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.RefSpec.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.RemoteConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.RemoteRefUpdate.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.RequestNotYetReadException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.FileResolver.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.IReceivePackFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.IRepositoryResolver.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.IUploadPackFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.ServiceNotAuthorizedException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Resolver.ServiceNotEnabledException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.ServiceMayNotContinueException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.SideBandOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.SshSessionFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.SshTransport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TagOpt.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TcpTransport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TrackingRefUpdate.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransferConfig.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.Transport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportAmazonS3.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportBundleStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportGitSsh.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportHttp.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportProtocol.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.TransportSftp.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.UploadPack.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.UploadPackInternalServerErrorException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.UploadPackLoggerChain.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.UploadPackMayNotContinueException.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.URIish.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Transport.UsernamePasswordCredentialsProvider.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.AbstractTreeIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.CanonicalTreeParser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.EmptyTreeIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.FileTreeIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.AndTreeFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.IndexDiffFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.InterIndexDiffFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.NotIgnoredFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.NotTreeFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.OrTreeFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.PathFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.PathFilterGroup.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.PathSuffixFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.SkipWorkTreeFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.TreeFilter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.Filter.TreeFilterMarker.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.NameConflictTreeWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.TreeWalk.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.WorkingTreeIterator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Treewalk.WorkingTreeOptions.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.Base64.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.BlockList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.CachedAuthenticator.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.ChangeIdUtil.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FileUtils.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS_POSIX_Java5.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS_POSIX_Java6.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS_POSIX.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS_Win32_Cygwin.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS_Win32.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.FS.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.GitDateFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.GitDateParser.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.GSSManagerFactory.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.Hook.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.HttpSupport.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IntList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.AutoCRLFInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.AutoCRLFOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.CountingOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.DisabledOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.EolCanonicalizingInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.InterruptTimer.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.LimitedInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.MessageWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.NullOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.SafeBufferedOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.StreamCopyThread.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.TeeInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.ThrowingPrintWriter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.TimeoutInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.TimeoutOutputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.IO.UnionInputStream.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.LongList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.MutableInteger.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.NB.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.ProcessResult.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.QuotedString.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RawCharSequence.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RawCharUtil.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RawParseUtils.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RawSubStringPattern.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RefList.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RefMap.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.RelativeDateFormatter.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.StringUtils.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.SystemReader.cs" />
+    <Compile Include="Org.Eclipse.Jgit.Util.TemporaryBuffer.cs" />
+    <Compile Include="__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Jars\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidJavaLibrary Include="Jars\org.eclipse.jgit-3.7.1.201504261725-r.jar" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

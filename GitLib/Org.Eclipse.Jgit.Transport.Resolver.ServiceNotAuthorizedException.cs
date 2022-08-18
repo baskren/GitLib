@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using Android.Runtime;
+using Java.Interop;
+
+namespace Org.Eclipse.Jgit.Transport.Resolver {
+
+	/// <summary>Indicates the request service is not authorized for current user.</summary>
+	// Metadata.xml XPath class reference: path="/api/package[@name='org.eclipse.jgit.transport.resolver']/class[@name='ServiceNotAuthorizedException']"
+	[global::Android.Runtime.Register ("org/eclipse/jgit/transport/resolver/ServiceNotAuthorizedException", DoNotGenerateAcw=true)]
+	public partial class ServiceNotAuthorizedException : global::Java.Lang.Exception {
+		static readonly JniPeerMembers _members = new XAPeerMembers ("org/eclipse/jgit/transport/resolver/ServiceNotAuthorizedException", typeof (ServiceNotAuthorizedException));
+
+		internal static IntPtr class_ref {
+			get { return _members.JniPeerType.PeerReference.Handle; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+			get { return _members; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override IntPtr ThresholdClass {
+			get { return _members.JniPeerType.PeerReference.Handle; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override global::System.Type ThresholdType {
+			get { return _members.ManagedPeerType; }
+		}
+
+		protected ServiceNotAuthorizedException (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer)
+		{
+		}
+
+		/// <summary>Indicates the request service is not available.</summary>
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.eclipse.jgit.transport.resolver']/class[@name='ServiceNotAuthorizedException']/constructor[@name='ServiceNotAuthorizedException' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe ServiceNotAuthorizedException () : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			const string __id = "()V";
+
+			if (((global::Java.Lang.Throwable) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				var __r = _members.InstanceMethods.StartCreateInstance (__id, ((object) this).GetType (), null);
+				SetHandle (__r.Handle, JniHandleOwnership.TransferLocalRef);
+				_members.InstanceMethods.FinishCreateInstance (__id, this, null);
+			} finally {
+			}
+		}
+
+	}
+}
